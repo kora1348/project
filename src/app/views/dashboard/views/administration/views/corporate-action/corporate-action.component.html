@@ -1,0 +1,31 @@
+<div class="home-content container ">
+    <h1 class="text-center pt-5 pb-3">Opérations sur titres</h1>
+    <div class="row pt-3 container">
+    <div class="card" style="width: 100%;">
+    <div class="card-body">
+    <table class="table table-bordered">
+    <thead class="thead-light">
+    <tr class="text-center">
+    <th scope="col">Compte</th>
+    <th scope="col">Intitulé du compte</th>
+    <th scope="col">Type</th>
+    <th scope="col">Libellé</th>
+    <th scope="col">Quantité</th>
+    <th scope="col">Date limite</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let corporate of corporates">
+    <td scope="row"> {{ corporate.corporateCompte }} </td>
+    <td>{{ corporate.corporateAccount }}</td>
+    <td>{{ corporate.corporateType }}</td>
+    <td>{{ corporate.corporateLibelle }}</td>
+    <td>{{ corporate.corporateQuantity}}</td>
+    <td>{{ corporate.corporateDate}}</td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
+    </div>
