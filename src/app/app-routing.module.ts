@@ -11,7 +11,7 @@ loadChildren: () => import('./views/identity/identity.module').then((m) => m.Ide
 
 {
 path: '',
-loadChildren: () => import('./views/dashboard/dashboard.module').then((m) => m.DashboardModule),
+loadChildren: () => import('./views/online/online.module').then((m) => m.OnlineModule),
 },
 
 

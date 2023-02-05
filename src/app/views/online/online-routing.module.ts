@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CanActivateTeam } from 'src/app/core/canActivateTeam.guard';
-import { DashboardComponent } from './dashboard.component';
+import { OnlineComponent } from './online.component';
 
-const DASHBOARD_ROUTES: Routes = [
+
+const ONLINE_ROUTES: Routes = [
 {
-path: 'dashboard',
-component: DashboardComponent,
+path: 'online',
+component: OnlineComponent,
 canActivate: [CanActivateTeam],
 
 children: [
@@ -23,7 +24,7 @@ import('./views/administration/administration.module').then(
 ];
 
 @NgModule({
-imports: [RouterModule.forChild(DASHBOARD_ROUTES)],
+imports: [RouterModule.forChild(ONLINE_ROUTES)],
 exports: [RouterModule],
 })
-export class DashboardRoutingModule {}
+export class OnlineRoutingModule {}

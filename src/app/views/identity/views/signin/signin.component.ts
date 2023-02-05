@@ -30,7 +30,7 @@ import { Login } from "./login";
   res => {
   if (res.islogged === true) {
   this.store.dispatch(new SessionAction(res))
-  this.router.navigate(['/dashboard/administration/corporate-action']);
+  this.router.navigate(['/online/administration/corporate-action']);
   } else {
   alert("L'identifiant est incorrect ! ")
   }

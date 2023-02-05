@@ -6,11 +6,11 @@ import { SessionAction } from '../../store/session/session.actions';
 import { SessionState } from '../../store/session/session.state';
 
 @Component({
-selector: 'app-dashboard',
-templateUrl: './dashboard.component.html',
-styleUrls: ['./dashboard.component.css'],
+selector: 'app-online',
+templateUrl: './online.component.html',
+styleUrls: ['./online.component.css'],
 })
-export class DashboardComponent implements OnInit {
+export class OnlineComponent implements OnInit {
 @Select(SessionState.user) user$!: Observable<string>;
 @Select(SessionState.islogged) islogged$!: Observable<string>;
 @Select(SessionState.connexionDate) connexionDate$!: Observable<string>;
@@ -29,7 +29,7 @@ menus: any[] = [
 id: '1',
 class: 'bx bx-lock-alt',
 item: 'Administration',
-route: '/dashboard/administration',
+route: '/online/administration',
 arrowDown: 'bx bx-chevron-down',
 arrowUp: 'bx bx-chevron-up',
 
@@ -37,22 +37,22 @@ submenus: [
 {
 class: 'bx bx-key',
 item: 'Ouverture d\'un compte',
-route: '/dashboard/administration/account-opening',
+route: '/online/administration/account-opening',
 },
 {
 class: 'bx bx-wallet',
 item: 'Sélection d\'un protefeuille',
-route: '/dashboard/administration/portfolio',
+route: '/online/administration/portfolio',
 },
 {
 class: 'bx bxs-bank',
 item: 'Corporate actions',
-route: '/dashboard/administration/corporate-action',
+route: '/online/administration/corporate-action',
 },
 {
 class: 'bx bx-pie-chart-alt-2',
 item: 'Visualisation des dépôts',
-route: '/dashboard/administration/visualization-deposit',
+route: '/online/administration/visualization-deposit',
 },
 ],
 },
@@ -62,7 +62,7 @@ route: '/dashboard/administration/visualization-deposit',
 id: '2',
 class: 'bx bx-chart',
 item: 'Market',
-route: '/dashboard/market',
+route: '/online/market',
 arrowDown: 'bx bx-chevron-down',
 arrowUp: 'bx bx-chevron-up',
 
@@ -70,22 +70,22 @@ submenus: [
 {
 class: 'bx bx-coin-stack',
 item: 'Valeurs',
-route: '/dashboard/market/value',
+route: '/online/market/value',
 },
 {
 class: 'bx bx-line-chart',
 item: 'Indices Boursiers',
-route: '/dashboard/market/indice',
+route: '/online/market/indice',
 },
 {
 class: 'bx bx-dollar',
 item: 'Devise',
-route: '/dashboard/market/currency',
+route: '/online/market/currency',
 },
 {
 class: 'bx bx-spreadsheet',
 item: 'Tableau de valeurs',
-route: '/dashboard/market/valuable-table',
+route: '/online/market/valuable-table',
 },
 ],
 },
@@ -93,7 +93,7 @@ route: '/dashboard/market/valuable-table',
 { id: '3',
 class: 'bx bx-lock-alt',
 item: 'DTA',
-route: '/dashboard/dta',
+route: '/online/dta',
 arrowDown: 'bx bx-chevron-down',
 arrowUp: 'bx bx-chevron-up',
 
@@ -101,17 +101,17 @@ submenus: [
 {
 class: 'bx bx-plus-circle',
 item: 'Création formulaire',
-route: '/dashboard/dta/form-create',
+route: '/online/dta/form-create',
 },
 {
 class: 'bx bx-x-circle',
 item: 'Suppresion formulaire',
-route: '/dashboard/dta/form-delete',
+route: '/online/dta/form-delete',
 },
 {
 class: 'bx bx-right-arrow-circle',
 item: 'Suivi formulaire',
-route: '/dashboard/dta/form-follow-up',
+route: '/online/dta/form-follow-up',
 },
 
 ],
