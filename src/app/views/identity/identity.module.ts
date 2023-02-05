@@ -7,23 +7,9 @@ import { IdentityRoutingModule } from "./identity-routing.module";
 import { IdentityComponent } from "./identity.component";
 import { SigninComponent } from "./views/signin/signin.component";
 
-
 @NgModule({
-declarations: [
-IdentityComponent,
-SigninComponent,
-
-],
-imports: [
-CommonModule,
-RouterModule,
-FormsModule,
-IdentityRoutingModule
-
-],
-providers: [
-SessionService
-]
+  declarations: [IdentityComponent, SigninComponent],
+  imports: [CommonModule, RouterModule, FormsModule, IdentityRoutingModule],
+  providers: [SessionService],
 })
-export class IdentityModule { }
-
+export class IdentityModule {}
